@@ -21,3 +21,5 @@ then
 ```shell
 open http://localhost:8000
 ```
+
+![image](https://user-images.githubusercontent.com/4971414/139536388-729f924c-3f20-4163-bdd5-274efc940b27.png)
