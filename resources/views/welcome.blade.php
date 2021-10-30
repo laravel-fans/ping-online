@@ -15,23 +15,26 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .border-w {
+                border-width: 1px;
+            }
         </style>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h1>ping</h1>
+                <div>
+                    <h1 class="text-center text-gray-600 dark:text-gray-400">ping</h1>
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1">
-                        <div class="p-6">
+                        <div class="p-6 text-gray-600 dark:text-gray-400">
                             <div class="flex justify-center">
                                 <form method="GET">
                                     <label for="title">host: </label>
-                                    <input id="host" name="host" type="text" value="{{ $host }}" />
-                                    <input type="submit" value="ping" />
+                                    <input id="host" name="host" type="text" value="{{ $host }}" class="border-w border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800" />
+                                    <input type="submit" value="ping"  class="text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900" />
                                 </form>
                             </div>
                             <div class="flex bg-gray-100 dark:bg-gray-900">
