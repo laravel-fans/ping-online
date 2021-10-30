@@ -15,9 +15,10 @@ class WelcomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $host = $request->input('host', '');
+        $host = $request->input('host');
         $logs = [];
         if (empty($host)) {
+            $host = 'example.com';
             return view('welcome', compact('logs', 'host'));
         }
 
