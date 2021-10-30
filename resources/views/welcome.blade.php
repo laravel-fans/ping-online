@@ -33,7 +33,7 @@
                             <div class="flex justify-center">
                                 <form method="GET">
                                     <label for="title">host: </label>
-                                    <input id="host" name="host" type="text" value="{{ $host }}" class="border-w border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800" />
+                                    <input id="host" name="host" type="text" value="{{ old($host, 'example.com') }}" class="border-w border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800" />
                                     <input type="submit" value="ping"  class="text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900" />
                                 </form>
                             </div>
