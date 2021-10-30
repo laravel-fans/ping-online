@@ -16,15 +16,20 @@ class WelcomeController extends Controller
     public function __invoke(Request $request)
     {
         $host = $request->input('host', 'example.com');
+        $logs = ['not support Windows'];
+        if (PHP_OS_FAMILY == 'Windows') {
+            return view('welcome', compact('logs', 'host'));
+        }
+        $logs = [];
+        $bin = PHP_OS_FAMILY == 'Darwin' ? '/sbin/ping' : '/bin/ping';
         $process = new Process([
-            '/sbin/ping',
+            $bin,
             '-c',
             '3',
             $host
         ]);
         $process->start();
 
-        $logs = [];
         foreach ($process as $type => $data) {
             $lines = explode("\n", $data);
             foreach ($lines as $line) {
